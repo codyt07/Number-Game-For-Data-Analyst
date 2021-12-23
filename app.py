@@ -7,11 +7,11 @@ SCORE = []
 
 def welcome():
     print('''\n*** Welcome to Guess The Number! ***
-        \r*** The game will correct a number between 1 - 100 ***
+        \r*** The game will create a random number between 1 - 100 ***
         \r*** Try to guess the number in the least amount of tries! ***''')
     
 def main_game():
-    winning_number = random.randint(1,5)
+    winning_number = random.randint(1,100)
     guesses = 1
     while True:
         player_guess = input('\nPlease Enter a number between 1 - 100: ')
