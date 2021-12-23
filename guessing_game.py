@@ -12,6 +12,9 @@ def welcome():
     
 def main_game():
     winning_number = random.randint(1,100)
+    if len(SCORE) > 0:
+        best_score = min(SCORE)
+        print(f'\n** You best score so far is {best_score}!')
     guesses = 1
     while True:
         player_guess = input('\nPlease Enter a number between 1 - 100: ')
@@ -59,7 +62,7 @@ def new_game():
             main_game()
             break
         elif new_game.lower() == 'b':
-            print("Thank you for playing!")
+            print(" *** Thank you for playing! ***")
             exit()
         else:
             print("\n**** Invalid selection! ****")
