@@ -5,16 +5,15 @@ from statistics import mode, median
 #Scorecard for mean, median, mode
 SCORE = []
 
-def welcome():
-    print('''\n*** Welcome to Guess The Number! ***
-        \r*** The game will create a random number between 1 - 100 ***
-        \r*** Try to guess the number in the least amount of tries! ***''')
-    
 def main_game():
     winning_number = random.randint(1,100)
     if len(SCORE) > 0:
         best_score = min(SCORE)
         print(f'\n** You best score so far is {best_score}!')
+    else:
+        print('''\n*** Welcome to Guess The Number! ***
+        \r*** The game will create a random number between 1 - 100 ***
+        \r*** Try to guess the number in the least amount of tries! ***''')
     guesses = 1
     while True:
         player_guess = input('\nPlease Enter a number between 1 - 100: ')
@@ -68,5 +67,4 @@ def new_game():
             print("\n**** Invalid selection! ****")
 
 if __name__ == '__main__':
-    welcome()
     main_game()
